@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+body {
+	margin:0;
+	font:40px Arial, Helvetica, sans-serif
+}
+section {
+	display: block;
+	height: 2000px;
+	background-color:#CFF;
+	padding:60px;
+	padding-left:120px;
+	
+}
+#one
+{
+	background:#dddfd4;
+	
+}
+#two
+{
+	background:#fae596;
+	
+}
+#three
+{
+	background:#3fb0ac;
+	
+	
+}
+#four
+{
+	background:#173e43;
+	color:#FFF;
+}
+#five
+{
+	background:#22264b;
+	color:#FFF;
+}
+
+nav
+{
+	position:fixed;
+}
+
+a {
+	font-size: 12px;
+	color: #FFF;
+	background-color: #000;
+	display: block;
+	margin: 3px;
+	padding: 10px;
+	text-align: center;
+}
+</style>
+
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+
+<script type="text/javascript">
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+
+</head>
+
+<body>
+<nav><a href="#one">one</a> <a href="#two">two</a> <a href="#three">three</a> <a href="#four">four</a> <a href="#five">five</a></nav>
+<section id = "one"> Page 1 </section>
+<section id = "two"> Page 2 </section>
+<section id = "three"> Page 3 </section>
+<section id = "four"> Page 4 </section>
+<section id = "five"> Page 5 </section>
+</body>
+</html>
